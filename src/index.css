@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import "./old_styles.css";
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --color-brand-orange: #FF8C42;
+  --color-brand-orange-dark: #E67A35;
+  --color-brand-blue: #2563EB;
+  --color-brand-navy: #0F172A;
+  --color-section-grey: #F4F7FA;
+}
+
+.journey-shell {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 140, 66, 0.08), transparent 34%),
+    radial-gradient(circle at 84% 12%, rgba(37, 99, 235, 0.08), transparent 34%),
+    #fafcff;
+}
+
+.journey-shell footer {
+  background: transparent !important;
+  border-color: rgba(148, 163, 184, 0.16) !important;
+}
+
+.ambigo-subpage-shell {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(255, 140, 66, 0.12), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(37, 99, 235, 0.1), transparent 32%),
+    linear-gradient(180deg, #fbfdff 0%, #f6f9fc 58%, #fff7f1 100%);
+}
+
+.ambigo-subpage-shell::before,
+.ambigo-subpage-shell::after {
+  content: "";
+  position: fixed;
+  inset-inline: -8%;
+  height: 44vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.72;
+}
+
+.ambigo-subpage-shell::before {
+  top: 22vh;
+  background:
+    radial-gradient(ellipse at 22% 45%, rgba(255, 140, 66, 0.12), transparent 44%),
+    linear-gradient(170deg, transparent 0 38%, rgba(255, 218, 194, 0.42) 39% 51%, rgba(209, 229, 244, 0.36) 52% 65%, transparent 66%);
+}
+
+.ambigo-subpage-shell::after {
+  bottom: -14vh;
+  background:
+    linear-gradient(8deg, rgba(226, 232, 240, 0.72) 0 36%, rgba(255, 225, 205, 0.54) 37% 49%, rgba(214, 235, 249, 0.42) 50% 60%, transparent 61%);
+}
+
+.ambigo-subpage-shell main,
+.ambigo-subpage-shell footer {
+  position: relative;
+  z-index: 1;
+}
+
+.ambigo-subpage-shell footer {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(14px);
+  border-color: rgba(226, 232, 240, 0.72) !important;
+}
+
+.ambigo-subpage-shell main {
+  font-family: var(--font-poppins);
+  color: #0f172a;
+}
+
+.ambigo-subpage-shell main > div[style],
+.ambigo-subpage-shell main > h1:first-of-type,
+.ambigo-subpage-shell .aboutwhat,
+.ambigo-subpage-shell .conmain-heading,
+.ambigo-subpage-shell .conpartner-header,
+.ambigo-subpage-shell .OurTeamAMbigo,
+.ambigo-subpage-shell .careerhead,
+.ambigo-subpage-shell .training-content,
+.ambigo-subpage-shell .headers_page,
+.ambigo-subpage-shell .form-header,
+.ambigo-subpage-shell .blog-header {
+  position: relative;
+  z-index: 1;
+}
+
+.ambigo-subpage-shell h1,
+.ambigo-subpage-shell h2,
+.ambigo-subpage-shell h3,
+.ambigo-subpage-shell h4 {
+  color: #0f172a !important;
+  letter-spacing: 0 !important;
+}
+
+.ambigo-subpage-shell h1 {
+  font-size: clamp(2.1rem, 4vw, 4.2rem) !important;
+  line-height: 1.05 !important;
+  font-weight: 800 !important;
+}
+
+.ambigo-subpage-shell h1::after {
+  display: none !important;
+}
+
+.ambigo-subpage-shell h2 {
+  font-size: clamp(1.65rem, 2.6vw, 3rem) !important;
+  line-height: 1.14 !important;
+  font-weight: 800 !important;
+}
+
+.ambigo-subpage-shell h3 {
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem) !important;
+  line-height: 1.38 !important;
+}
+
+.ambigo-subpage-shell p,
+.ambigo-subpage-shell li,
+.ambigo-subpage-shell a {
+  letter-spacing: 0 !important;
+}
+
+.ambigo-subpage-shell p,
+.ambigo-subpage-shell li {
+  color: #5f708d !important;
+  font-size: clamp(0.96rem, 1vw, 1.08rem) !important;
+  line-height: 1.72 !important;
+  font-weight: 500 !important;
+}
+
+.ambigo-subpage-shell span[style*="orange"],
+.ambigo-subpage-shell .conhighlight,
+.ambigo-subpage-shell .consubtitle,
+.ambigo-subpage-shell .contitle,
+.ambigo-subpage-shell .Whyheading,
+.ambigo-subpage-shell .app-promo-title {
+  color: #ff6b2c !important;
+  text-decoration: none !important;
+}
+
+.ambigo-subpage-shell main > h1:first-of-type,
+.ambigo-subpage-shell main > h1:first-of-type + p,
+.ambigo-subpage-shell .aboutwhat,
+.ambigo-subpage-shell .conmain-heading,
+.ambigo-subpage-shell .conpartner-header {
+  max-width: 980px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-inline: 24px;
+}
+
+.ambigo-subpage-shell main > h1:first-of-type + p,
+.ambigo-subpage-shell .aboutwhat p,
+.ambigo-subpage-shell .consubtitle,
+.ambigo-subpage-shell .Whydescription {
+  max-width: 860px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.ambigo-subpage-shell .about-container,
+.ambigo-subpage-shell .concontact-page,
+.ambigo-subpage-shell .conpartner-container,
+.ambigo-subpage-shell .app-promo-container,
+.ambigo-subpage-shell .typeofAmbulance,
+.ambigo-subpage-shell .Whycontainer,
+.ambigo-subpage-shell .hosemergency-container,
+.ambigo-subpage-shell .entercontainer,
+.ambigo-subpage-shell .career-container,
+.ambigo-subpage-shell .termscontent,
+.ambigo-subpage-shell .ambigo-page,
+.ambigo-subpage-shell .headers_page,
+.ambigo-subpage-shell .form-container,
+.ambigo-subpage-shell .blog-container {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+.ambigo-subpage-shell .historyintro,
+.ambigo-subpage-shell .indiservice,
+.ambigo-subpage-shell .hospitalintro,
+.ambigo-subpage-shell .enterERS,
+.ambigo-subpage-shell .concontent-container,
+.ambigo-subpage-shell .conpartnership-options,
+.ambigo-subpage-shell .hoscontent-wrapper,
+.ambigo-subpage-shell .promo-card,
+.ambigo-subpage-shell .AmbulanceItem,
+.ambigo-subpage-shell .Ambufeature,
+.ambigo-subpage-shell .concontact-info-card,
+.ambigo-subpage-shell .conhelp-section,
+.ambigo-subpage-shell .conpartner-card,
+.ambigo-subpage-shell .career-box,
+.ambigo-subpage-shell .job-card,
+.ambigo-subpage-shell .TeamMate,
+.ambigo-subpage-shell .benefit,
+.ambigo-subpage-shell .service-card,
+.ambigo-subpage-shell .blog-card,
+.ambigo-subpage-shell .form-card,
+.ambigo-subpage-shell .hosform-section,
+.ambigo-subpage-shell .enterform-section,
+.ambigo-subpage-shell .SSinfo,
+.ambigo-subpage-shell .partner-card,
+.ambigo-subpage-shell .achievement-card {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(16px) saturate(1.06);
+}
+
+.ambigo-subpage-shell .team-card,
+.ambigo-subpage-shell .card-front,
+.ambigo-subpage-shell .card-back,
+.ambigo-subpage-shell .tip,
+.ambigo-subpage-shell .training-section,
+.ambigo-subpage-shell .login-box,
+.ambigo-subpage-shell .termscontent,
+.ambigo-subpage-shell .termstabs,
+.ambigo-subpage-shell .ambulance-services,
+.ambigo-subpage-shell .first-aid-tips,
+.ambigo-subpage-shell .why-choose-ambigo,
+.ambigo-subpage-shell .entercontact-wrapper {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(16px) saturate(1.06);
+}
+
+.ambigo-subpage-shell .historyintro,
+.ambigo-subpage-shell .indiservice,
+.ambigo-subpage-shell .hospitalintro,
+.ambigo-subpage-shell .enterERS,
+.ambigo-subpage-shell .concontent-container,
+.ambigo-subpage-shell .hoscontent-wrapper {
+  max-width: 1160px;
+  margin: 36px auto !important;
+  padding: clamp(24px, 4vw, 44px) !important;
+  gap: clamp(24px, 4vw, 52px) !important;
+}
+
+.ambigo-subpage-shell .team-container,
+.ambigo-subpage-shell .training-container,
+.ambigo-subpage-shell .login-container,
+.ambigo-subpage-shell .termsContainer,
+.ambigo-subpage-shell .benefits-container,
+.ambigo-subpage-shell .tips-container,
+.ambigo-subpage-shell .team-grid,
+.ambigo-subpage-shell .job-list {
+  position: relative;
+  z-index: 1;
+}
+
+.ambigo-subpage-shell .team-page .hero-section,
+.ambigo-subpage-shell .ambigo-page .hero-section,
+.ambigo-subpage-shell .careerhead {
+  max-width: 1160px;
+  margin: 36px auto !important;
+  border-radius: 28px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)),
+    radial-gradient(circle at 86% 20%, rgba(88, 183, 238, 0.16), transparent 36%),
+    radial-gradient(circle at 18% 80%, rgba(255, 140, 66, 0.14), transparent 42%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow: 0 24px 66px rgba(15, 23, 42, 0.08) !important;
+  color: #0f172a !important;
+}
+
+.ambigo-subpage-shell .team-page .hero-content,
+.ambigo-subpage-shell .ambigo-page .hero-content {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+
+.ambigo-subpage-shell img {
+  max-width: 100%;
+}
+
+.ambigo-subpage-shell .historyright,
+.ambigo-subpage-shell .indiservright,
+.ambigo-subpage-shell .hospitalintroleft,
+.ambigo-subpage-shell .ERSleft,
+.ambigo-subpage-shell .hosambulance-image,
+.ambigo-subpage-shell .careerheadright img {
+  border-radius: 18px !important;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.1);
+  object-fit: cover;
+}
+
+.ambigo-subpage-shell .team-card img,
+.ambigo-subpage-shell .section-image,
+.ambigo-subpage-shell .enterimage-section img {
+  border-radius: 18px !important;
+  object-fit: cover;
+}
+
+.ambigo-subpage-shell button,
+.ambigo-subpage-shell .conlocation-btn,
+.ambigo-subpage-shell .conpartner-button,
+.ambigo-subpage-shell .hossubmit-button,
+.ambigo-subpage-shell .apply-button {
+  border: none !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #ff8c42, #ff6422) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 14px 30px rgba(255, 100, 34, 0.22) !important;
+}
+
+.ambigo-subpage-shell .filter-buttons button,
+.ambigo-subpage-shell .termstabs button {
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: #334155 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.ambigo-subpage-shell .filter-buttons button.active,
+.ambigo-subpage-shell .termstabs button.active {
+  background: linear-gradient(90deg, #ff8c42, #ff6422) !important;
+  color: #fff !important;
+}
+
+.ambigo-subpage-shell input,
+.ambigo-subpage-shell textarea,
+.ambigo-subpage-shell .hosform-input {
+  border: 1px solid rgba(203, 213, 225, 0.72) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.ambigo-subpage-shell .app-promo-container {
+  padding-block: 64px !important;
+}
+
+.ambigo-subpage-shell .promo-card-content {
+  border-radius: 20px !important;
+}
+
+.ambigo-subpage-shell .Whycontainer {
+  color: #0f172a !important;
+  padding-block: 72px !important;
+}
+
+.ambigo-subpage-shell .Ambuicon-box {
+  background: rgba(255, 140, 66, 0.12) !important;
+  color: #ff6b2c !important;
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+
+.journey-home > section {
+  position: relative;
+  background: transparent !important;
+  border-color: rgba(148, 163, 184, 0.12) !important;
+}
+
+.journey-home > section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.journey-terrain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.journey-terrain__layers {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(var(--journey-drift, 0), var(--journey-shift, 0), 0);
+  transition: transform 0.18s linear;
+  will-change: transform;
+}
+
+.journey-welcome {
+  position: fixed;
+  left: 50%;
+  top: clamp(155px, 25vh, 255px);
+  z-index: 2;
+  width: min(90vw, 1060px);
+  transform: translate3d(-50%, 0, 0);
+  color: #050816;
+  font-family: var(--font-poppins);
+  font-size: clamp(38px, 6.4vw, 96px);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 8px 22px rgba(255, 255, 255, 0.72);
+  animation: journeyWelcomeIn 0.82s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
+}
+
+.journey-terrain__layer {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  height: 118vh;
+  top: 22vh;
+  overflow: visible;
+  will-change: transform;
+  transform-origin: center bottom;
+}
+
+.journey-terrain__layer--peach {
+  fill: rgba(255, 145, 82, 0.18);
+  filter: drop-shadow(0 -10px 28px rgba(255, 140, 66, 0.08));
+}
+
+.journey-terrain__layer--blue {
+  fill: rgba(101, 190, 240, 0.18);
+  top: 24vh;
+}
+
+.journey-terrain__layer--orange {
+  fill: rgba(255, 107, 44, 0.14);
+  top: 27vh;
+}
+
+.journey-terrain__layer--front {
+  fill: rgba(214, 220, 226, 0.36);
+  top: 30vh;
+  filter: drop-shadow(0 -8px 24px rgba(15, 23, 42, 0.04));
+}
+
+.journey-terrain__road {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  height: 118vh;
+  top: 27vh;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.58);
+  stroke-width: 18;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 10px 18px rgba(15, 23, 42, 0.04));
+  opacity: 0.86;
+}
+
+.journey-ambulance {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: clamp(220px, 19vw, 360px);
+  z-index: 1;
+  transform: translate3d(12vw, 50vh, 0);
+  transform-origin: 50% 82%;
+  will-change: transform;
+}
+
+.journey-ambulance img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: journeySuspension 4.8s ease-in-out infinite;
+  filter: drop-shadow(0 17px 18px rgba(15, 23, 42, 0.14));
+}
+
+.journey-ambulance__shadow {
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: 2%;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.14);
+  filter: blur(5px);
+  transform: translate3d(0, 10px, 0);
+}
+
+@keyframes journeySuspension {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0) rotate(-0.35deg);
+  }
+}
+
+@keyframes journeyWelcomeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-terrain__layer {
+    top: 35vh;
+    height: 96vh;
+  }
+
+  .journey-terrain__layer--blue {
+    top: 37vh;
+  }
+
+  .journey-terrain__layer--orange {
+    top: 40vh;
+  }
+
+  .journey-terrain__layer--front {
+    top: 44vh;
+  }
+
+  .journey-terrain__road {
+    top: 40vh;
+    height: 96vh;
+    stroke-width: 12;
+  }
+
+  .journey-ambulance {
+    width: clamp(150px, 42vw, 220px);
+    opacity: 0.9;
+  }
+
+  .journey-welcome {
+    top: clamp(150px, 27vh, 230px);
+    font-size: clamp(32px, 10vw, 58px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-terrain__layers,
+  .journey-ambulance,
+  .journey-ambulance img,
+  .journey-welcome {
+    transition: none !important;
+    animation: none !important;
+  }
+}
