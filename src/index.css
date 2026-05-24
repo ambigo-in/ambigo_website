@@ -13,6 +13,26 @@
   --color-section-grey: #F4F7FA;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
 .journey-shell {
   position: relative;
   isolation: isolate;
@@ -362,6 +382,457 @@
   border: 1px solid rgba(255, 140, 66, 0.2);
 }
 
+.ambigo-subpage-shell main {
+  overflow-x: hidden;
+}
+
+.ambigo-subpage-shell main > div[style] {
+  height: clamp(20px, 4vw, 42px) !important;
+  margin-top: 0 !important;
+}
+
+.ambigo-subpage-shell main > h1:first-of-type {
+  margin-top: clamp(20px, 4vw, 38px) !important;
+  margin-bottom: 12px !important;
+  font-size: clamp(2rem, 4.3vw, 4rem) !important;
+}
+
+.ambigo-subpage-shell main > h1:first-of-type + p,
+.ambigo-subpage-shell main > h3:first-of-type {
+  max-width: 780px;
+  margin: 0 auto clamp(22px, 4vw, 36px) !important;
+  padding-inline: 20px;
+  text-align: center !important;
+}
+
+.ambigo-subpage-shell .conmain-heading {
+  margin: clamp(18px, 4vw, 34px) auto clamp(20px, 4vw, 38px) !important;
+  padding-top: 8px;
+}
+
+.ambigo-subpage-shell .conmain-heading h1 {
+  max-width: 1040px;
+  margin: 0 auto 14px !important;
+  font-size: clamp(2rem, 5vw, 4.6rem) !important;
+  line-height: 1.02 !important;
+}
+
+.ambigo-subpage-shell .consubtitle {
+  font-size: clamp(0.96rem, 1.2vw, 1.15rem) !important;
+  line-height: 1.55 !important;
+}
+
+.ambigo-subpage-shell .historyintro,
+.ambigo-subpage-shell .indiservice,
+.ambigo-subpage-shell .hospitalintro,
+.ambigo-subpage-shell .enterERS,
+.ambigo-subpage-shell .concontent-container,
+.ambigo-subpage-shell .hoscontent-wrapper {
+  max-width: min(1080px, calc(100% - 40px)) !important;
+  margin: clamp(22px, 4vw, 34px) auto !important;
+  padding: clamp(18px, 2.6vw, 32px) !important;
+  gap: clamp(18px, 3vw, 36px) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+}
+
+.ambigo-subpage-shell .indiservice,
+.ambigo-subpage-shell .hospitalintro,
+.ambigo-subpage-shell .enterERS,
+.ambigo-subpage-shell .historyintro,
+.ambigo-subpage-shell .hoscontent-wrapper {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.ambigo-subpage-shell .concontent-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.ambigo-subpage-shell .concontact-info-card,
+.ambigo-subpage-shell .conhelp-section,
+.ambigo-subpage-shell .conpartner-card,
+.ambigo-subpage-shell .AmbulanceItem,
+.ambigo-subpage-shell .Ambufeature,
+.ambigo-subpage-shell .benefit,
+.ambigo-subpage-shell .tip,
+.ambigo-subpage-shell .job-card,
+.ambigo-subpage-shell .TeamMate,
+.ambigo-subpage-shell .service-card,
+.ambigo-subpage-shell .blog-card,
+.ambigo-subpage-shell .form-card,
+.ambigo-subpage-shell .partner-card,
+.ambigo-subpage-shell .achievement-card,
+.ambigo-subpage-shell .career-box {
+  border-radius: 18px !important;
+  padding: clamp(18px, 2.4vw, 30px) !important;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.065), inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+}
+
+.ambigo-subpage-shell .conhelp-options p {
+  padding: 16px 18px !important;
+  border-radius: 12px !important;
+}
+
+.ambigo-subpage-shell .historyright,
+.ambigo-subpage-shell .indiservright,
+.ambigo-subpage-shell .hospitalintroleft,
+.ambigo-subpage-shell .ERSleft,
+.ambigo-subpage-shell .hosambulance-image {
+  width: 100% !important;
+  max-width: 520px !important;
+  max-height: 340px !important;
+  aspect-ratio: 4 / 3;
+  margin: 0 !important;
+  justify-self: center;
+}
+
+.ambigo-subpage-shell .historyintroleft,
+.ambigo-subpage-shell .indiservleft,
+.ambigo-subpage-shell .hspitalintroright,
+.ambigo-subpage-shell .ERSright,
+.ambigo-subpage-shell .hoscontent-text {
+  min-width: 0;
+}
+
+.ambigo-subpage-shell .historyintroleft h1,
+.ambigo-subpage-shell .indiservleft h1,
+.ambigo-subpage-shell .hspitalintroright h1,
+.ambigo-subpage-shell .ERSright h1,
+.ambigo-subpage-shell .hoscontent-text h1 {
+  font-size: clamp(1.9rem, 3.4vw, 3.8rem) !important;
+  overflow-wrap: anywhere;
+}
+
+.ambigo-subpage-shell .historyintroleft p,
+.ambigo-subpage-shell .indiservleft p,
+.ambigo-subpage-shell .hspitalintroright p,
+.ambigo-subpage-shell .ERSright p,
+.ambigo-subpage-shell .conhelp-text,
+.ambigo-subpage-shell .concontact-list li {
+  font-size: clamp(0.94rem, 1vw, 1.04rem) !important;
+  line-height: 1.65 !important;
+}
+
+.ambigo-subpage-shell .app-promo-container {
+  padding-block: clamp(38px, 6vw, 58px) !important;
+}
+
+.ambigo-subpage-shell .app-promo-content {
+  max-width: 1080px !important;
+  padding-inline: clamp(18px, 3vw, 28px) !important;
+}
+
+.ambigo-subpage-shell .app-promo-title {
+  margin-bottom: clamp(22px, 3vw, 30px) !important;
+  font-size: clamp(2rem, 4vw, 3.8rem) !important;
+  text-align: center !important;
+}
+
+.ambigo-subpage-shell .promo-cards-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 22px) !important;
+  margin-bottom: clamp(16px, 2vw, 22px) !important;
+}
+
+.ambigo-subpage-shell .promo-card {
+  min-width: 0 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+
+.ambigo-subpage-shell .promo-card-content {
+  min-height: 126px;
+  padding: clamp(16px, 2vw, 22px) !important;
+  gap: clamp(14px, 2vw, 22px) !important;
+}
+
+.ambigo-subpage-shell .qr-code-wrapper,
+.ambigo-subpage-shell .app-logo-wrapper,
+.ambigo-subpage-shell .app-logo-container {
+  width: clamp(76px, 8vw, 100px) !important;
+  height: clamp(76px, 8vw, 100px) !important;
+  min-width: clamp(76px, 8vw, 100px) !important;
+}
+
+.ambigo-subpage-shell .qr-code,
+.ambigo-subpage-shell .app-logo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.ambigo-subpage-shell .promo-text h2 {
+  font-size: clamp(1.25rem, 2.1vw, 2.35rem) !important;
+  line-height: 1.12 !important;
+}
+
+.ambigo-subpage-shell .promo-text p {
+  font-size: 0.95rem !important;
+  line-height: 1.45 !important;
+}
+
+.ambigo-subpage-shell .arrow-icon,
+.ambigo-subpage-shell .large-arrow-icon {
+  flex: 0 0 auto;
+}
+
+.ambigo-subpage-shell .bottom-signup {
+  margin-top: clamp(18px, 3vw, 28px) !important;
+  padding: clamp(18px, 2.4vw, 26px) !important;
+  border-radius: 18px !important;
+}
+
+.ambigo-subpage-shell .bottom-signup h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2.45rem) !important;
+}
+
+.ambigo-subpage-shell .about-container,
+.ambigo-subpage-shell .concontact-page,
+.ambigo-subpage-shell .conpartner-container,
+.ambigo-subpage-shell .career-container,
+.ambigo-subpage-shell .training-container,
+.ambigo-subpage-shell .login-container,
+.ambigo-subpage-shell .termsContainer,
+.ambigo-subpage-shell .blog-container,
+.ambigo-subpage-shell .form-container {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(14px, 3vw, 36px);
+}
+
+.ambigo-subpage-shell .Ambufeatures,
+.ambigo-subpage-shell .typeAmbucontainer,
+.ambigo-subpage-shell .benefits-container,
+.ambigo-subpage-shell .tips-container,
+.ambigo-subpage-shell .job-list,
+.ambigo-subpage-shell .team-grid,
+.ambigo-subpage-shell .conpartnership-options,
+.ambigo-subpage-shell .achievements-container,
+.ambigo-subpage-shell .partners-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)) !important;
+  gap: clamp(16px, 2.2vw, 26px) !important;
+  max-width: min(1120px, calc(100% - 32px)) !important;
+  margin-inline: auto !important;
+}
+
+.ambigo-subpage-shell .AmbulanceItem,
+.ambigo-subpage-shell .Ambufeature,
+.ambigo-subpage-shell .benefit,
+.ambigo-subpage-shell .tip,
+.ambigo-subpage-shell .job-card,
+.ambigo-subpage-shell .TeamMate,
+.ambigo-subpage-shell .service-card,
+.ambigo-subpage-shell .blog-card,
+.ambigo-subpage-shell .partner-card,
+.ambigo-subpage-shell .achievement-card {
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+.ambigo-subpage-shell .AmbulanceItem img,
+.ambigo-subpage-shell .benefit img,
+.ambigo-subpage-shell .tip img,
+.ambigo-subpage-shell .TeamMate img,
+.ambigo-subpage-shell .service-card img,
+.ambigo-subpage-shell .blog-card img,
+.ambigo-subpage-shell .partner-card img,
+.ambigo-subpage-shell .achievement-card img {
+  max-height: 190px;
+  object-fit: contain;
+}
+
+.ambigo-subpage-shell .careerhead,
+.ambigo-subpage-shell .team-page .hero-section,
+.ambigo-subpage-shell .ambigo-page .hero-section,
+.ambigo-subpage-shell .termscontent,
+.ambigo-subpage-shell .termstabs,
+.ambigo-subpage-shell .ambulance-services,
+.ambigo-subpage-shell .first-aid-tips,
+.ambigo-subpage-shell .why-choose-ambigo,
+.ambigo-subpage-shell .entercontact-wrapper,
+.ambigo-subpage-shell .training-section,
+.ambigo-subpage-shell .login-box {
+  max-width: min(1080px, calc(100% - 40px)) !important;
+  margin-inline: auto !important;
+  padding: clamp(18px, 2.8vw, 34px) !important;
+  border-radius: 20px !important;
+}
+
+@media (min-width: 1440px) {
+  .ambigo-subpage-shell .historyintro,
+  .ambigo-subpage-shell .indiservice,
+  .ambigo-subpage-shell .hospitalintro,
+  .ambigo-subpage-shell .enterERS,
+  .ambigo-subpage-shell .concontent-container,
+  .ambigo-subpage-shell .hoscontent-wrapper,
+  .ambigo-subpage-shell .app-promo-content {
+    max-width: 1120px !important;
+  }
+
+  .ambigo-subpage-shell main > h1:first-of-type,
+  .ambigo-subpage-shell .conmain-heading h1 {
+    font-size: clamp(3rem, 4vw, 4.4rem) !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .ambigo-subpage-shell .historyintro,
+  .ambigo-subpage-shell .indiservice,
+  .ambigo-subpage-shell .hospitalintro,
+  .ambigo-subpage-shell .enterERS,
+  .ambigo-subpage-shell .concontent-container,
+  .ambigo-subpage-shell .hoscontent-wrapper {
+    max-width: min(1040px, calc(100% - 48px)) !important;
+  }
+
+  .ambigo-subpage-shell .promo-card-content {
+    min-height: 116px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ambigo-subpage-shell .historyintro,
+  .ambigo-subpage-shell .indiservice,
+  .ambigo-subpage-shell .hospitalintro,
+  .ambigo-subpage-shell .enterERS,
+  .ambigo-subpage-shell .concontent-container,
+  .ambigo-subpage-shell .hoscontent-wrapper {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  .ambigo-subpage-shell .historyright,
+  .ambigo-subpage-shell .indiservright,
+  .ambigo-subpage-shell .hospitalintroleft,
+  .ambigo-subpage-shell .ERSleft,
+  .ambigo-subpage-shell .hosambulance-image {
+    max-width: 100% !important;
+    max-height: 320px !important;
+  }
+
+  .ambigo-subpage-shell .concontact-list {
+    text-align: left;
+  }
+
+  .ambigo-subpage-shell .promo-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ambigo-subpage-shell .promo-card-content {
+    min-height: 112px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ambigo-subpage-shell main {
+    padding-top: 72px !important;
+  }
+
+  .ambigo-subpage-shell h1 {
+    font-size: clamp(1.9rem, 8vw, 3.1rem) !important;
+  }
+
+  .ambigo-subpage-shell h2 {
+    font-size: clamp(1.45rem, 6vw, 2.35rem) !important;
+  }
+
+  .ambigo-subpage-shell p,
+  .ambigo-subpage-shell li {
+    font-size: 0.94rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .ambigo-subpage-shell .historyintro,
+  .ambigo-subpage-shell .indiservice,
+  .ambigo-subpage-shell .hospitalintro,
+  .ambigo-subpage-shell .enterERS,
+  .ambigo-subpage-shell .concontent-container,
+  .ambigo-subpage-shell .hoscontent-wrapper {
+    max-width: calc(100% - 28px) !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .ambigo-subpage-shell .promo-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ambigo-subpage-shell .promo-card-content {
+    min-height: 0;
+  }
+
+  .ambigo-subpage-shell .careerhead,
+  .ambigo-subpage-shell .team-page .hero-section,
+  .ambigo-subpage-shell .ambigo-page .hero-section,
+  .ambigo-subpage-shell .termscontent,
+  .ambigo-subpage-shell .termstabs,
+  .ambigo-subpage-shell .ambulance-services,
+  .ambigo-subpage-shell .first-aid-tips,
+  .ambigo-subpage-shell .why-choose-ambigo,
+  .ambigo-subpage-shell .entercontact-wrapper,
+  .ambigo-subpage-shell .training-section,
+  .ambigo-subpage-shell .login-box {
+    max-width: calc(100% - 28px) !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .ambigo-subpage-shell main > h1:first-of-type,
+  .ambigo-subpage-shell .conmain-heading h1 {
+    font-size: clamp(1.85rem, 11vw, 2.8rem) !important;
+  }
+
+  .ambigo-subpage-shell .promo-card-content {
+    align-items: center !important;
+  }
+
+  .ambigo-subpage-shell .promo-text h2 {
+    font-size: 1.18rem !important;
+  }
+
+  .ambigo-subpage-shell .arrow-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ambigo-subpage-shell .about-container,
+  .ambigo-subpage-shell .concontact-page,
+  .ambigo-subpage-shell .conpartner-container,
+  .ambigo-subpage-shell .career-container,
+  .ambigo-subpage-shell .training-container,
+  .ambigo-subpage-shell .login-container,
+  .ambigo-subpage-shell .termsContainer,
+  .ambigo-subpage-shell .blog-container,
+  .ambigo-subpage-shell .form-container {
+    padding-inline: 10px;
+  }
+
+  .ambigo-subpage-shell .historyintro,
+  .ambigo-subpage-shell .indiservice,
+  .ambigo-subpage-shell .hospitalintro,
+  .ambigo-subpage-shell .enterERS,
+  .ambigo-subpage-shell .concontent-container,
+  .ambigo-subpage-shell .hoscontent-wrapper {
+    max-width: calc(100% - 20px) !important;
+    padding: 14px !important;
+  }
+
+  .ambigo-subpage-shell .promo-card-content {
+    padding: 14px !important;
+    gap: 12px !important;
+  }
+}
+
 
 .journey-home > section {
   position: relative;
@@ -374,12 +845,99 @@
   z-index: 2;
 }
 
+.home-ambulance-type-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+}
+
+.home-ambulance-type-grid > div {
+  min-width: 0;
+}
+
+.journey-home {
+  width: 100%;
+  max-width: 100vw;
+}
+
+.journey-home section {
+  max-width: 100%;
+}
+
+.journey-home section:not(:first-child) {
+  overflow: hidden;
+}
+
+.journey-home section:not(:first-child) > div:not([class*="absolute"]) {
+  max-width: min(100%, 1180px);
+}
+
+.journey-home h1,
+.journey-home h2,
+.journey-home h3,
+.journey-home h4,
+.journey-home p {
+  letter-spacing: 0;
+}
+
+.journey-home h2 {
+  font-size: clamp(2rem, 3.3vw, 3.6rem) !important;
+  line-height: 1.08 !important;
+}
+
+.journey-home h3 {
+  overflow-wrap: anywhere;
+}
+
+.journey-home p {
+  overflow-wrap: anywhere;
+}
+
+.journey-home .grid > * {
+  min-width: 0;
+}
+
+.journey-home [class*="shadow-"] {
+  max-width: 100%;
+}
+
+.journey-home button,
+.journey-home a {
+  max-width: 100%;
+}
+
+.home-health-tip-grid > div {
+  padding: 0 !important;
+}
+
+.home-health-tip-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+.ambigo-footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ambigo-footer__grid {
+  align-items: start;
+}
+
+.ambigo-footer__grid > div,
+.ambigo-footer__bottom {
+  min-width: 0;
+}
+
 .journey-terrain {
   position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+}
+
+.journey-terrain svg {
+  max-width: none;
 }
 
 .journey-terrain__layers {
@@ -413,8 +971,8 @@
 
 .journey-terrain__layer {
   position: absolute;
-  left: -5%;
-  width: 110%;
+  left: -18vw;
+  width: 136vw;
   height: 118vh;
   top: 22vh;
   overflow: visible;
@@ -445,8 +1003,8 @@
 
 .journey-terrain__road {
   position: absolute;
-  left: -5%;
-  width: 110%;
+  left: -18vw;
+  width: 136vw;
   height: 118vh;
   top: 27vh;
   fill: none;
@@ -512,7 +1070,314 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .journey-home section:not(:first-child) {
+    padding-block: 80px !important;
+    padding-inline: 24px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) {
+    gap: 22px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
+    padding: 24px !important;
+    border-radius: 24px !important;
+  }
+
+  .journey-home section:not(:first-child) .text-7xl {
+    font-size: 3.25rem !important;
+    line-height: 1 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .journey-home section:not(:first-child) .h-56 {
+    height: 12rem !important;
+  }
+
+  .journey-home section:not(:first-child) .h-48 {
+    height: 10.5rem !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .journey-home section:not(:first-child) {
+    padding-block: 68px !important;
+    padding-inline: 20px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
+    padding: 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) .flex {
+    min-width: 0;
+  }
+
+  .journey-home section:not(:first-child) .text-4xl,
+  .journey-home section:not(:first-child) .text-5xl {
+    font-size: clamp(2rem, 5.8vw, 3rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .journey-home section:not(:first-child) .text-xl {
+    font-size: 1.05rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .journey-home section:not(:first-child) p {
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .journey-home section:not(:first-child) img {
+    object-fit: contain;
+  }
+
+  .journey-home section:not(:first-child) .home-health-tip-grid img {
+    object-fit: cover !important;
+  }
+
+  .journey-home section:not(:first-child) .w-64 {
+    width: 100% !important;
+    max-width: 17rem !important;
+  }
+
+  .journey-home section:not(:first-child) .rounded-\[40px\] {
+    border-radius: 26px !important;
+  }
+
+  .journey-home section:not(:first-child) .home-health-tip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .journey-home section:not(:first-child) .home-health-tip-grid > div {
+    padding: 0 !important;
+  }
+
+  .journey-home section:not(:first-child) .home-health-tip-grid > div > div:first-child {
+    height: 150px !important;
+  }
+
+  .journey-home section:not(:first-child) .home-health-tip-grid > div > div:last-child {
+    padding: 18px !important;
+    text-align: left !important;
+  }
+
+  .ambigo-footer {
+    padding-block: 48px 28px !important;
+  }
+
+  .ambigo-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 34px 28px !important;
+    margin-bottom: 36px !important;
+    padding-inline: 28px !important;
+  }
+
+  .ambigo-footer__grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .ambigo-footer__grid h4 {
+    margin-bottom: 14px !important;
+  }
+
+  .ambigo-footer__grid ul {
+    display: grid;
+    gap: 10px;
+  }
+
+  .ambigo-footer__grid li {
+    margin: 0 !important;
+  }
+
+  .ambigo-footer__bottom {
+    padding-inline: 28px !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    overflow-x: hidden;
+  }
+
+  .journey-home > section:first-child {
+    min-height: 92vh;
+  }
+
+  .journey-home > section:not(:first-child) {
+    padding-block: 56px !important;
+    padding-inline: 16px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .journey-home section:not(:first-child) .flex:not(.hero-ambulance-float) {
+    min-width: 0;
+  }
+
+  .journey-home section:not(:first-child) .md\:flex-row,
+  .journey-home section:not(:first-child) .lg\:flex-row,
+  .journey-home section:not(:first-child) .sm\:flex-row {
+    flex-direction: column !important;
+  }
+
+  .journey-home section:not(:first-child) .items-start,
+  .journey-home section:not(:first-child) .items-center {
+    align-items: center !important;
+  }
+
+  .journey-home section:not(:first-child) .text-left {
+    text-align: center !important;
+  }
+
+  .journey-home section:not(:first-child) .mb-20,
+  .journey-home section:not(:first-child) .mb-16 {
+    margin-bottom: 32px !important;
+  }
+
+  .journey-home section:not(:first-child) .mb-12,
+  .journey-home section:not(:first-child) .mb-10 {
+    margin-bottom: 24px !important;
+  }
+
+  .journey-home section:not(:first-child) .gap-10,
+  .journey-home section:not(:first-child) .gap-8 {
+    gap: 18px !important;
+  }
+
+  .journey-home section:not(:first-child) .p-10,
+  .journey-home section:not(:first-child) .p-8 {
+    padding: 18px !important;
+  }
+
+  .journey-home section:not(:first-child) .py-4 {
+    padding-block: 12px !important;
+  }
+
+  .journey-home section:not(:first-child) .h-40,
+  .journey-home section:not(:first-child) .h-56 {
+    height: 10rem !important;
+  }
+
+  .journey-home section:not(:first-child) .h-\[350px\] {
+    height: 230px !important;
+  }
+
+  .journey-home section:not(:first-child) .rounded-\[40px\],
+  .journey-home section:not(:first-child) .rounded-\[32px\],
+  .journey-home section:not(:first-child) .rounded-3xl {
+    border-radius: 20px !important;
+  }
+
+  .journey-home section:not(:first-child) .text-7xl {
+    font-size: 2.75rem !important;
+  }
+
+  .journey-home section:not(:first-child) .text-lg {
+    font-size: 0.98rem !important;
+  }
+
+  .home-health-tips .flex.justify-between {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .home-health-tip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .home-health-tip-grid > div {
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+  .home-health-tip-grid > div > div:first-child {
+    height: 132px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .home-health-tip-grid > div > div:last-child {
+    padding: 14px !important;
+  }
+
+  .home-health-tip-grid h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .home-health-tip-grid p {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .home-health-tip-grid span {
+    margin-bottom: 10px !important;
+  }
+
+  .home-ambulance-types__intro {
+    margin-bottom: 32px !important;
+  }
+
+  .home-ambulance-types__intro h2 {
+    font-size: clamp(2rem, 7vw, 2.65rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .home-ambulance-types__intro p {
+    max-width: 54ch !important;
+    font-size: 0.95rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .home-ambulance-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .home-ambulance-type-grid > div {
+    border-radius: 20px !important;
+    padding: 16px !important;
+  }
+
+  .home-ambulance-type-grid > div > div:first-child {
+    height: 92px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .home-ambulance-type-grid h3 {
+    font-size: 0.98rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .home-ambulance-type-grid p {
+    margin-bottom: 14px !important;
+  }
+
+  .home-ambulance-type-grid button {
+    padding-block: 10px !important;
+  }
+
   .journey-terrain__layer {
     top: 35vh;
     height: 96vh;
@@ -542,8 +1407,85 @@
   }
 
   .journey-welcome {
-    top: clamp(150px, 27vh, 230px);
-    font-size: clamp(32px, 10vw, 58px);
+    top: clamp(155px, 26vh, 220px);
+    width: min(92vw, 560px);
+    font-size: clamp(34px, 8.6vw, 52px);
+    line-height: 1.02;
+    white-space: normal;
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-ambulance-type-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .journey-welcome {
+    font-size: clamp(32px, 10vw, 44px);
+  }
+
+  .journey-home section:not(:first-child) {
+    padding-inline: 14px !important;
+  }
+
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div,
+  .journey-home section:not(:first-child) .p-8,
+  .journey-home section:not(:first-child) .p-10 {
+    padding: 16px !important;
+  }
+
+  .journey-home section:not(:first-child) .h-48,
+  .journey-home section:not(:first-child) .w-64 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .journey-home section:not(:first-child) .h-48 {
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  .journey-home section:not(:first-child) .absolute.top-8.right-8 {
+    top: 18px !important;
+    right: 18px !important;
+  }
+
+  .home-health-tip-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .home-health-tip-grid > div > div:first-child {
+    height: 170px !important;
+  }
+
+  .ambigo-footer {
+    padding-block: 36px 24px !important;
+  }
+
+  .ambigo-footer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+    padding-inline: 22px !important;
+    text-align: left;
+  }
+
+  .ambigo-footer__grid > div:first-child {
+    grid-column: auto;
+  }
+
+  .ambigo-footer__grid > div:first-child .flex,
+  .ambigo-footer__grid > div:last-child .flex {
+    justify-content: flex-start;
+  }
+
+  .ambigo-footer__bottom {
+    padding-inline: 22px !important;
+    font-size: 0.82rem !important;
   }
 }
 

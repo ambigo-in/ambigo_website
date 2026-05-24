@@ -3,19 +3,19 @@
 const Home = () => {
   return (
     <div className="journey-home font-poppins text-slate-800 overflow-x-hidden relative min-h-screen bg-transparent">
-      
+
       {/* --- HERO SECTION — Scene-based illustrated composition --- */}
       <section className="relative min-h-[92vh] overflow-hidden">
 
         {/* ═══ ATMOSPHERIC DECORATION ═══ */}
-        <div className="absolute -top-16 -left-24 w-[520px] h-[420px] rounded-[60%_40%_55%_45%] bg-gradient-to-br from-[#fdd5b1]/20 to-[#fbb68a]/8 blur-[50px] pointer-events-none" style={{zIndex: 0}}></div>
-        <div className="absolute -top-8 right-[-60px] w-[450px] h-[380px] bg-gradient-to-bl from-[#d4e8fb]/25 to-transparent rounded-full blur-[60px] pointer-events-none" style={{zIndex: 0}}></div>
-        <div className="absolute top-[28%] right-[5%] w-[300px] h-[250px] bg-[#fdecd2]/15 rounded-full blur-[50px] pointer-events-none" style={{zIndex: 0}}></div>
+        <div className="absolute -top-16 -left-24 w-[520px] h-[420px] rounded-[60%_40%_55%_45%] bg-gradient-to-br from-[#fdd5b1]/20 to-[#fbb68a]/8 blur-[50px] pointer-events-none" style={{ zIndex: 0 }}></div>
+        <div className="absolute -top-8 right-[-60px] w-[450px] h-[380px] bg-gradient-to-bl from-[#d4e8fb]/25 to-transparent rounded-full blur-[60px] pointer-events-none" style={{ zIndex: 0 }}></div>
+        <div className="absolute top-[28%] right-[5%] w-[300px] h-[250px] bg-[#fdecd2]/15 rounded-full blur-[50px] pointer-events-none" style={{ zIndex: 0 }}></div>
 
         {/* ═══ TOP HALF — Content: heading left, card right ═══ */}
-        <div className="relative max-w-[1300px] mx-auto px-6 lg:px-16" style={{zIndex: 20}}>
+        <div className="relative max-w-[1300px] mx-auto px-6 lg:px-16" style={{ zIndex: 20 }}>
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 pt-8 lg:pt-4">
-            
+
             {/* ── LEFT: heading + subtitle ── */}
             <div className="hero-fade-up w-full lg:w-[44%] flex flex-col items-start justify-start pt-0 relative z-20">
 
@@ -58,7 +58,7 @@ const Home = () => {
             {/* ── RIGHT: card — overlaps upper terrain boundary ── */}
             <div className="hero-fade-up hero-fade-delay-2 w-full lg:w-[48%] flex flex-col items-center lg:items-end justify-start lg:-mt-12">
               <div className="hero-benefit-card bg-white/82 backdrop-blur-xl border border-white/60 px-6 py-6 lg:px-7 lg:py-7 rounded-[24px] shadow-[0_8px_28px_rgba(26,35,64,0.045),0_2px_8px_rgba(26,35,64,0.025)] w-full max-w-[420px] relative">
-                
+
                 {/* Card Header */}
                 <div className="mb-4">
                   <span className="text-[11px] font-bold text-[#ff8c42] uppercase tracking-widest block mb-1.5">Ambigo Benefits</span>
@@ -86,76 +86,76 @@ const Home = () => {
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full">
                   <button className="w-full bg-gradient-to-r from-[#ff8c42] to-[#ff6b21] text-white font-bold tracking-wide py-3 px-6 rounded-full shadow-[0_8px_20px_rgba(255,140,66,0.18)] hover:shadow-[0_12px_28px_rgba(255,140,66,0.28)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2.5 text-sm">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.74 3.48-.71 1.58.04 2.82.72 3.54 1.83-3.02 1.68-2.51 5.37.49 6.64-.72 1.82-1.61 3.56-2.59 4.41zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.74 3.48-.71 1.58.04 2.82.72 3.54 1.83-3.02 1.68-2.51 5.37.49 6.64-.72 1.82-1.61 3.56-2.59 4.41zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg>
                     DOWNLOAD AMBIGO
                   </button>
-                  
+
                   <button className="w-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-200/80 font-bold tracking-wide py-3 px-6 rounded-full hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2.5 text-xs">
                     <span className="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center text-[#ff8c42] shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                     </span>
                     CALL: +91 8985138102
                   </button>
                 </div>
-                
+
               </div>
             </div>
           </div>
         </div>
 
         {/* ═══ BOTTOM HALF — Illustrated landscape scene (48% of hero) ═══ */}
-        <div className="absolute bottom-0 left-0 w-full pointer-events-none" style={{height: '48%', zIndex: 5}}>
+        <div className="absolute bottom-0 left-0 w-full pointer-events-none" style={{ height: '48%', zIndex: 5 }}>
 
           {/* DEPTH LAYER 1 (back): Soft peach terrain — broad gentle rolling hills */}
-          <svg className="hero-terrain-layer hero-terrain-back absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{zIndex: 1}}>
+          <svg className="hero-terrain-layer hero-terrain-back absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{ zIndex: 1 }}>
             <defs>
               <linearGradient id="terrainPeach" x1="0" y1="0" x2="1440" y2="600" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#ff7a2f" stopOpacity="0.58"/>
-                <stop offset="48%" stopColor="#ffb47c" stopOpacity="0.38"/>
-                <stop offset="100%" stopColor="#f7d2b5" stopOpacity="0.26"/>
+                <stop offset="0%" stopColor="#ff7a2f" stopOpacity="0.58" />
+                <stop offset="48%" stopColor="#ffb47c" stopOpacity="0.38" />
+                <stop offset="100%" stopColor="#f7d2b5" stopOpacity="0.26" />
               </linearGradient>
             </defs>
-            <path d="M0,270 C120,210 220,178 350,170 C505,160 610,226 760,210 C930,192 1010,130 1165,118 C1285,108 1370,138 1440,112 L1440,600 L0,600 Z" fill="url(#terrainPeach)"/>
+            <path d="M0,270 C120,210 220,178 350,170 C505,160 610,226 760,210 C930,192 1010,130 1165,118 C1285,108 1370,138 1440,112 L1440,600 L0,600 Z" fill="url(#terrainPeach)" />
           </svg>
 
           {/* DEPTH LAYER 2 (middle): Main blue terrain — dramatic landscape ridge */}
-          <svg className="hero-terrain-layer hero-terrain-mid absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{zIndex: 2}}>
+          <svg className="hero-terrain-layer hero-terrain-mid absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{ zIndex: 2 }}>
             <defs>
               <linearGradient id="terrainBlue" x1="0" y1="0" x2="1440" y2="600" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#58b7ee" stopOpacity="0.56"/>
-                <stop offset="46%" stopColor="#9dcaec" stopOpacity="0.48"/>
-                <stop offset="100%" stopColor="#c9dde9" stopOpacity="0.36"/>
+                <stop offset="0%" stopColor="#58b7ee" stopOpacity="0.56" />
+                <stop offset="46%" stopColor="#9dcaec" stopOpacity="0.48" />
+                <stop offset="100%" stopColor="#c9dde9" stopOpacity="0.36" />
               </linearGradient>
               <linearGradient id="terrainOrange" x1="0" y1="170" x2="1440" y2="420" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#ff5f2d" stopOpacity="0.28"/>
-                <stop offset="50%" stopColor="#ff8a3d" stopOpacity="0.18"/>
-                <stop offset="100%" stopColor="#ffb27a" stopOpacity="0.24"/>
+                <stop offset="0%" stopColor="#ff5f2d" stopOpacity="0.28" />
+                <stop offset="50%" stopColor="#ff8a3d" stopOpacity="0.18" />
+                <stop offset="100%" stopColor="#ffb27a" stopOpacity="0.24" />
               </linearGradient>
             </defs>
-            <path d="M0,250 C115,165 250,108 410,132 C565,158 655,248 815,256 C960,264 1055,202 1195,192 C1310,184 1375,214 1440,190 L1440,600 L0,600 Z" fill="url(#terrainBlue)"/>
-            <path d="M0,302 C155,235 285,202 430,214 C595,228 690,296 850,306 C1020,316 1130,272 1275,260 C1358,253 1405,264 1440,248 L1440,600 L0,600 Z" fill="url(#terrainOrange)"/>
+            <path d="M0,250 C115,165 250,108 410,132 C565,158 655,248 815,256 C960,264 1055,202 1195,192 C1310,184 1375,214 1440,190 L1440,600 L0,600 Z" fill="url(#terrainBlue)" />
+            <path d="M0,302 C155,235 285,202 430,214 C595,228 690,296 850,306 C1020,316 1130,272 1275,260 C1358,253 1405,264 1440,248 L1440,600 L0,600 Z" fill="url(#terrainOrange)" />
           </svg>
 
           {/* ═══ AMBULANCE — embedded on blue terrain ridge (between layers 2 & 3) ═══ */}
-          <div className="hidden hero-fade-up hero-fade-delay-1 hero-ambulance-float absolute left-[6%] lg:left-[10%] select-none" style={{zIndex: 4, bottom: '69.5%'}}>
-            <img 
-              src="/images/ambulance6.png" 
-              alt="Ambigo Ambulance" 
-              className="w-[180px] lg:w-[280px] h-auto object-contain relative z-10 drop-shadow-[0_16px_20px_rgba(15,23,42,0.12)]" 
+          <div className="hidden hero-fade-up hero-fade-delay-1 hero-ambulance-float absolute left-[6%] lg:left-[10%] select-none" style={{ zIndex: 4, bottom: '69.5%' }}>
+            <img
+              src="/images/ambulance6.png"
+              alt="Ambigo Ambulance"
+              className="w-[180px] lg:w-[280px] h-auto object-contain relative z-10 drop-shadow-[0_16px_20px_rgba(15,23,42,0.12)]"
             />
             {/* Ground contact shadow — premium soft illustration feel, short, soft, directly under wheels */}
             <div className="absolute bottom-[2px] left-[15%] right-[15%] h-[6px] bg-[#1a2340]/[0.10] rounded-[50%] blur-[2.5px] z-0"></div>
           </div>
 
           {/* DEPTH LAYER 3 (front): Translucent foreground wash — cinematic depth */}
-          <svg className="hero-terrain-layer hero-terrain-front absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{zIndex: 3}}>
+          <svg className="hero-terrain-layer hero-terrain-front absolute inset-0 w-full h-full" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none" style={{ zIndex: 3 }}>
             <defs>
               <linearGradient id="terrainWash" x1="0" y1="250" x2="0" y2="600" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#d7dde2" stopOpacity="0.76"/>
-                <stop offset="100%" stopColor="#f5f8fb" stopOpacity="0.96"/>
+                <stop offset="0%" stopColor="#d7dde2" stopOpacity="0.76" />
+                <stop offset="100%" stopColor="#f5f8fb" stopOpacity="0.96" />
               </linearGradient>
             </defs>
-            <path d="M0,372 C150,318 285,292 445,304 C610,318 715,382 875,390 C1035,398 1180,356 1440,334 L1440,600 L0,600 Z" fill="url(#terrainWash)"/>
+            <path d="M0,372 C150,318 285,292 445,304 C610,318 715,382 875,390 C1035,398 1180,356 1440,334 L1440,600 L0,600 Z" fill="url(#terrainWash)" />
           </svg>
 
         </div>
@@ -270,7 +270,7 @@ const Home = () => {
       </section>
 
       {/* --- TYPES OF AMBULANCE --- */}
-      <section className="py-32 px-6 lg:px-12 max-w-7xl mx-auto z-20 relative">
+      <section className="home-ambulance-types py-32 px-6 lg:px-12 max-w-7xl mx-auto z-20 relative">
         {/* Section Wavy Background */}
         <div className="absolute top-0 left-0 w-[100vw] h-full -z-10 overflow-hidden pointer-events-none left-1/2 -translate-x-1/2">
           <svg className="absolute top-0 left-0 w-full h-full drop-shadow-sm opacity-60" viewBox="0 0 1440 600" preserveAspectRatio="none">
@@ -278,15 +278,15 @@ const Home = () => {
             <path fill="#ffedd5" d="M1440,120 C1160,280 940,20 540,120 C240,190 90,90 0,40 L0,0 L1440,0 Z"></path>
           </svg>
         </div>
-        <div className="text-center mb-16">
+        <div className="home-ambulance-types__intro text-center mb-16">
           <h2 className="text-4xl font-extrabold text-slate-900 mb-6">Type of Ambulance</h2>
           <p className="text-slate-500 max-w-3xl mx-auto leading-relaxed">
             Ambigo provides a comprehensive range of ambulance services designed to meet the diverse needs of our customers. From standard ambulance services to advanced options like patient transport, advance transport and basic life support, we cater to every possible requirement with utmost care and professionalism.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6">
-          
+        <div className="home-ambulance-type-grid grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6">
+
           {/* Card 1 */}
           <div className="bg-white rounded-[30px] p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-slate-50 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-full h-32 mb-6 flex items-center justify-center">
@@ -361,7 +361,7 @@ const Home = () => {
         </div>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-extrabold text-center mb-20 text-slate-900">Why Choose Ambigo?</h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {/* Item 1 */}
             <div className="flex flex-col items-center">
@@ -407,7 +407,7 @@ const Home = () => {
             <h2 className="text-2xl font-bold text-slate-800 tracking-wider uppercase">Insights</h2>
             <div className="h-px w-12 bg-orange-300"></div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full text-center">
             <div className="flex flex-col items-center">
               <h3 className="text-4xl font-extrabold text-orange-500 mb-2">150+</h3>
@@ -434,7 +434,7 @@ const Home = () => {
               <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Doctors</p>
             </div>
           </div>
-          
+
           <div className="mt-12 inline-flex items-center gap-3 bg-white px-8 py-3 rounded-full shadow-sm border border-slate-100">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
             <p className="text-slate-600 font-medium">Response Time: <span className="font-bold text-slate-900">Less than 10 mins</span></p>
@@ -569,46 +569,46 @@ const Home = () => {
       <section className="py-24 px-6 lg:px-12 bg-white relative overflow-hidden">
         {/* Decorative background cutouts matching design */}
         <div className="absolute right-0 top-0 w-[40%] h-full bg-orange-50/50 rounded-tl-[100px] -z-10"></div>
-        
+
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative">
-          
+
           <div className="w-full md:w-[40%] flex flex-col items-start">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Real-Time<br/>Tracking</h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Real-Time<br />Tracking</h2>
             <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Map view, ambulance with destination and marked onar destination.</p>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-10 py-4 transition-all shadow-[0_10px_20px_rgba(249,115,22,0.3)] hover:-translate-y-1">
               Learn More
             </button>
           </div>
-          
+
           <div className="w-full md:w-[60%] relative">
-             <div className="w-full bg-[#f8fafc] rounded-[40px] p-4 lg:p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
-               {/* Map Illustration Placeholder */}
-               <div className="w-full h-[350px] bg-[#eef2ff] rounded-[30px] relative overflow-hidden">
-                  {/* Fake map roads */}
-                  <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: 'linear-gradient(45deg, transparent 48%, #94a3b8 48%, #94a3b8 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #94a3b8 48%, #94a3b8 52%, transparent 52%)', backgroundSize: '80px 80px' }}></div>
-                  
-                  {/* Fake route line */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 200" preserveAspectRatio="none">
-                    <path d="M50,150 L150,150 L350,50" fill="none" stroke="#2563EB" strokeWidth="6" strokeDasharray="10 10" />
-                  </svg>
-                  
-                  {/* Ambulance icon on map */}
-                  <div className="absolute bottom-[20%] left-[10%] bg-white p-3 rounded-2xl shadow-xl">
-                    <img src="/patientTransportAmbi.png" className="w-10 h-10 object-contain transform -scale-x-100" alt="Ambulance marker" />
-                  </div>
-                  
-                  {/* Destination Pin */}
-                  <div className="absolute top-[20%] right-[10%]">
-                    <svg className="w-14 h-14 text-orange-500 drop-shadow-xl" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
-                  </div>
-               </div>
-             </div>
+            <div className="w-full bg-[#f8fafc] rounded-[40px] p-4 lg:p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+              {/* Map Illustration Placeholder */}
+              <div className="w-full h-[350px] bg-[#eef2ff] rounded-[30px] relative overflow-hidden">
+                {/* Fake map roads */}
+                <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: 'linear-gradient(45deg, transparent 48%, #94a3b8 48%, #94a3b8 52%, transparent 52%), linear-gradient(-45deg, transparent 48%, #94a3b8 48%, #94a3b8 52%, transparent 52%)', backgroundSize: '80px 80px' }}></div>
+
+                {/* Fake route line */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 200" preserveAspectRatio="none">
+                  <path d="M50,150 L150,150 L350,50" fill="none" stroke="#2563EB" strokeWidth="6" strokeDasharray="10 10" />
+                </svg>
+
+                {/* Ambulance icon on map */}
+                <div className="absolute bottom-[20%] left-[10%] bg-white p-3 rounded-2xl shadow-xl">
+                  <img src="/patientTransportAmbi.png" className="w-10 h-10 object-contain transform -scale-x-100" alt="Ambulance marker" />
+                </div>
+
+                {/* Destination Pin */}
+                <div className="absolute top-[20%] right-[10%]">
+                  <svg className="w-14 h-14 text-orange-500 drop-shadow-xl" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* --- HEALTH TIPS --- */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
+      <section className="home-health-tips py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -620,7 +620,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="home-health-tip-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Tip 1 */}
             <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:-translate-y-2 transition-transform group">
               <div className="h-48 overflow-hidden">
@@ -632,7 +632,7 @@ const Home = () => {
                 <p className="text-slate-500 text-sm line-clamp-2">Discover how the right food choices can significantly improve your cardiovascular health.</p>
               </div>
             </div>
-            
+
             {/* Tip 2 */}
             <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:-translate-y-2 transition-transform group">
               <div className="h-48 overflow-hidden">
@@ -680,7 +680,7 @@ const Home = () => {
             <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6">Your Health, Our Priority</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">Experience comprehensive healthcare services designed for your convenience and well-being.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-[40px] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.04)] border border-slate-50 hover:-translate-y-2 transition-transform flex flex-col h-full">
@@ -750,7 +750,7 @@ const Home = () => {
           <p className="text-slate-500 mb-16 max-w-5xl mx-auto text-lg leading-relaxed">
             Partner with Us. Partner with Ambigo and join our mission to deliver exceptional ambulance services and medical care. Whether you're a hospital, a corporate entity, or an individual, we provide diverse partnership opportunities tailored to your needs. Together, we can create a meaningful impact in delivering timely and reliable emergency medical assistance. Let's collaborate to save lives and make a difference!
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-10 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
               <div className="text-7xl mb-6 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">🚑</div>
@@ -780,10 +780,10 @@ const Home = () => {
             <h2 className="text-4xl font-extrabold text-slate-900 mb-6">Prestigious Awards & Achievements</h2>
             <p className="text-slate-500 text-lg">Recognized by the most esteemed organizations for our outstanding contribution to the healthcare sector.</p>
           </div>
-          
+
           {/* Top 4 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            
+
             {/* Card 1 */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col items-start text-left hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
               <div className="h-16 w-full flex justify-start items-center mb-6">
@@ -829,16 +829,16 @@ const Home = () => {
           {/* Wide Award Card */}
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-12 rounded-[40px] shadow-xl mb-12 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-            
+
             <div className="flex-1 relative z-10 text-white">
               <div className="bg-white rounded-2xl inline-flex items-center justify-center p-3 mb-6 shadow-sm">
                 <img src="/apdts26.png" alt="Logo" className="h-10 object-contain" />
               </div>
               <p className="text-orange-100 text-sm mb-3 font-medium">We are honored to be a</p>
-              <h3 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Student Innovator /<br/>Campus Startup Award</h3>
+              <h3 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Student Innovator /<br />Campus Startup Award</h3>
               <p className="text-orange-200 font-bold tracking-wide">#techpioneers25</p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 relative z-10">
               <img src="/summit_ap.png" alt="Award 1" className="h-48 w-64 object-cover rounded-[16px] shadow-lg border-4 border-white/20 transition-transform duration-500 hover:scale-105 hover:border-white/40" />
               <img src="/summit_ap2.png" alt="Award 2" className="h-48 w-64 object-cover rounded-[16px] shadow-lg border-4 border-white/20 transition-transform duration-500 hover:scale-105 hover:border-white/40" />
@@ -847,7 +847,7 @@ const Home = () => {
 
           {/* Bottom 3 Cards (Gallery / Media) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Card 1 */}
             <div className="bg-white rounded-[32px] border border-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.04)] overflow-hidden hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col group">
               <div className="relative overflow-hidden h-56 p-4 pb-0">

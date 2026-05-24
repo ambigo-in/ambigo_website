@@ -23,6 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="AboutUs" element={<AboutUs />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="contacts" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
           
           {/* Services Pages */}

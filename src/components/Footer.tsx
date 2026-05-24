@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-20 pb-10 border-t border-slate-100 font-poppins relative z-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="ambigo-footer bg-white pt-20 pb-10 border-t border-slate-100 font-poppins relative z-20">
+      <div className="ambigo-footer__grid max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div>
           <div className="flex items-center gap-2 mb-6">
             <div className="w-8 h-8 relative">
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-slate-100 flex justify-between items-center text-sm font-medium text-slate-400">
+      <div className="ambigo-footer__bottom max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-slate-100 flex justify-between items-center text-sm font-medium text-slate-400">
         <p>© 2026 Ambigo. All Rights Reserved.</p>
       </div>
     </footer>
