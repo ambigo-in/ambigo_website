@@ -10,7 +10,7 @@ const teamMembers = [
     categories: ["Founder", "Leadership"],
     linkedin: "https://www.linkedin.com/in/karamthotisaikumarnaik",
     twitter: "#",
-    email: "#"
+    email: "#",
   },
   {
     name: "Y V Vivek",
@@ -20,7 +20,7 @@ const teamMembers = [
     categories: ["Development"],
     linkedin: "https://www.linkedin.com/in/y-v-vivek-30181621a",
     twitter: "#",
-    email: "#"
+    email: "#",
   },
   {
     name: "G Avineshwar",
@@ -30,7 +30,7 @@ const teamMembers = [
     categories: ["Development"],
     linkedin: "https://www.linkedin.com/in/avineshwarg",
     twitter: "#",
-    email: "#"
+    email: "#",
   },
   {
     name: "Vara Prasad Reddy",
@@ -40,7 +40,7 @@ const teamMembers = [
     categories: ["Advisory", "Development"],
     linkedin: "#",
     twitter: "#",
-    email: "#"
+    email: "#",
   },
   {
     name: "Dr.C.Chandra Mouli",
@@ -50,7 +50,7 @@ const teamMembers = [
     categories: ["Advisory", "Leadership"],
     linkedin: "#",
     twitter: "#",
-    email: "#"
+    email: "#",
   },
   {
     name: "Dr.M.Himaja Reddy, BDS",
@@ -60,8 +60,28 @@ const teamMembers = [
     categories: ["Advisory", "Leadership"],
     linkedin: "#",
     twitter: "#",
-    email: "#"
-  }
+    email: "#",
+  },
+  {
+    name: "Dr V srinivas naik",
+    role: "Advisor",
+    bio: " I haven been practicing medicine and playing a role of administartion in national programes",
+    image: "/srinivas_dr.png",
+    categories: ["Advisory"],
+    linkedin: "#",
+    twitter: "#",
+    email: "#",
+  },
+  {
+    name: "Sai Jaswanth Dasaganipalli",
+    role: "Advisor",
+    bio: "Assistant Professor & Academic Programme Coordinator (Emergency Medical Technology(Paramedic)& Anaesthesia and Operation Theater Technology)",
+    image: "/jaswanth_dr.jpeg",
+    categories: ["Advisory"],
+    linkedin: "#",
+    twitter: "#",
+    email: "#",
+  },
 ];
 
 const categories = [
