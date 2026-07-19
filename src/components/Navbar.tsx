@@ -22,9 +22,19 @@ const Navbar = () => {
     }`;
 
   const logo = (
-    <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-      <img src="/images/ambulance6.png" alt="Ambigo Logo" className="h-10 w-auto object-contain" />
-      <span className="font-poppins font-extrabold text-xl tracking-tight text-slate-900">Ambigo</span>
+    <Link
+      to="/"
+      className="flex items-center gap-2"
+      onClick={() => setIsOpen(false)}
+    >
+      <img
+        src="/images/ambulance6.png"
+        alt="Ambigo Logo"
+        className="h-10 w-auto object-contain"
+      />
+      <span className="font-poppins font-extrabold text-xl tracking-tight text-slate-900">
+        Ambigo Health Care Private Limited
+      </span>
     </Link>
   );
 
