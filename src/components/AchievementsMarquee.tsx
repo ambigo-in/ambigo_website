@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const achievements = [
   {
@@ -7,7 +7,9 @@ const achievements = [
     description: 'Gaining expert mentorship, guidance, and ecosystem support to grow faster.',
     imgSrc: '/aic_sku.png',
     imgAlt: 'AIC SKU',
-    theme: 'orange'
+    theme: 'orange',
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'RECOGNIZED AS',
@@ -15,7 +17,9 @@ const achievements = [
     description: 'Office space at RTIH - TATA Innovation Hub, Anantapur.',
     imgSrc: '/rtih.jpg',
     imgAlt: 'RTIH',
-    theme: 'orange'
+    theme: 'orange',
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'RECOGNITION FOR INNOVATION',
@@ -24,7 +28,8 @@ const achievements = [
     imgSrc: '/etv_bharath.png',
     imgAlt: 'ETV Bharath',
     theme: 'blue',
-    coverImage: true
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'INNOVATION CELL (IIC) RECOGNITION',
@@ -42,7 +47,8 @@ const achievements = [
     imgSrc: '/surya_news.png',
     imgAlt: 'Surya News',
     theme: 'blue',
-    coverImage: true
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'STARTUP CREDITS FROM GOOGLE CLOUD',
@@ -50,7 +56,9 @@ const achievements = [
     description: 'Enabling Ambigo to build, test, and scale its technology infrastructure with enterprise-grade cloud services.',
     imgSrc: '/google_cloud.jpg',
     imgAlt: 'Google Cloud',
-    theme: 'orange'
+    theme: 'orange',
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'RECOGNIZED BY',
@@ -58,7 +66,9 @@ const achievements = [
     description: 'Successfully registered and certified under the Startup India initiative.',
     imgSrc: '/dpiit.png',
     imgAlt: 'DPIIT',
-    theme: 'orange'
+    theme: 'orange',
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'TIMES BUSINESS AWARDS',
@@ -67,7 +77,8 @@ const achievements = [
     imgSrc: '/msme_logo.jpeg',
     imgAlt: 'MSME Logo',
     theme: 'blue',
-    coverImage: true
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'RECOGNITION BY JNTUA OFFICIALS',
@@ -76,7 +87,8 @@ const achievements = [
     imgSrc: '/jntu_sakshi.png',
     imgAlt: 'JNTU Sakshi',
     theme: 'blue',
-    coverImage: true
+    coverImage: true,
+    containImage: true
   },
   {
     type: 'NEWS COVERAGE',
@@ -85,8 +97,7 @@ const achievements = [
     imgSrc: '/images/achievements/achieve_1.jpg',
     imgAlt: 'News Coverage',
     theme: 'blue',
-    coverImage: true,
-    containImage: true
+    coverImage: true
   },
   {
     type: 'NEWS COVERAGE',
@@ -95,8 +106,7 @@ const achievements = [
     imgSrc: '/images/achievements/achieve_2.png',
     imgAlt: 'Press Recognition',
     theme: 'orange',
-    coverImage: true,
-    containImage: true
+    coverImage: true
   },
   {
     type: 'NEWS COVERAGE',
@@ -151,34 +161,39 @@ const achievements = [
 ];
 
 const AchievementsMarquee = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   // Duplicate array to create a seamless infinite loop
   const marqueeItems = [...achievements, ...achievements];
 
   return (
     <div className="w-full relative py-12" style={{ overflowX: 'clip' }}>
-      <motion.div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'nowrap',
-          width: 'max-content',
-          gap: '16px',
-          paddingLeft: '16px',
-        }}
-        animate={{
-          x: ['0%', '-50%'],
-        }}
-        transition={{
-          ease: 'linear',
-          duration: 40,
-          repeat: Infinity,
-        }}
-      >
+      <style>
+        {`
+          @keyframes scroll-marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: max-content;
+            gap: 16px;
+            padding-left: 16px;
+            animation: scroll-marquee 40s linear infinite;
+          }
+          .marquee-track:hover, .marquee-track.is-paused {
+            animation-play-state: paused !important;
+          }
+        `}
+      </style>
+      <div className={`marquee-track ${selectedImage ? 'is-paused' : ''}`}>
         {marqueeItems.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            className={`relative shrink-0 flex flex-col group cursor-pointer transition-all duration-500 ease-out hover:-translate-y-4 hover:shadow-[0_40px_80px_rgba(249,115,22,0.2)] ${
-              item.coverImage ? 'bg-white/90 backdrop-blur-md border border-orange-100 shadow-sm overflow-hidden' : 'bg-white/90 backdrop-blur-md flex flex-col items-start text-left relative z-10 border border-orange-100 shadow-sm'
+            className={`marquee-card relative shrink-0 flex flex-col group transition-all duration-500 ease-out hover:-translate-y-4 hover:shadow-[0_40px_80px_rgba(249,115,22,0.2)] bg-white hover:border-orange-500 transition-colors border border-orange-100 shadow-sm overflow-hidden ${
+              item.coverImage ? '' : 'items-start text-left'
             }`}
             style={{ 
               width: '280px', 
@@ -189,59 +204,101 @@ const AchievementsMarquee = () => {
               flexShrink: 0,
             }}
           >
-            {/* 3D Glow Behind Card */}
-            <div className={`absolute -inset-2 rounded-[24px] blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-500 ease-out -z-10 ${item.theme === 'orange' ? 'bg-orange-500' : 'bg-cyan-500'}`}></div>
+            {/* 3D Glow Behind Card removed as per request */}
 
             {item.coverImage ? (
               <>
-                <div className="relative overflow-hidden shrink-0" style={{ height: '160px', padding: '12px', paddingBottom: 0 }}>
+                <div className="marquee-cover-img relative overflow-hidden shrink-0 w-full" style={{ height: '160px', backgroundColor: '#f8fafc' }}>
+                  {item.containImage && (
+                    <img 
+                      src={item.imgSrc} 
+                      alt="" 
+                      style={{ 
+                        position: 'absolute',
+                        top: 0, left: 0,
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover', 
+                        filter: 'blur(15px) opacity(0.4)',
+                        transform: 'scale(1.2)',
+                        zIndex: 0
+                      }} 
+                    />
+                  )}
                   <img 
                     src={item.imgSrc} 
                     alt={item.imgAlt} 
-                    onClick={() => window.open(item.imgSrc, '_blank')}
                     title="Click to view full image"
+                    onClick={() => setSelectedImage(item.imgSrc)}
                     style={{ 
+                      position: 'relative',
                       width: '100%', 
                       height: '100%', 
-                      objectFit: 'cover', 
-                      objectPosition: 'top center',
+                      objectFit: item.containImage ? 'contain' : 'cover', 
+                      objectPosition: item.containImage ? 'center' : 'top center',
                       borderRadius: '14px 14px 2px 2px',
-                      cursor: 'pointer'
+                      cursor: 'pointer',
+                      zIndex: 1
                     }} 
                     className="group-hover:scale-105 transition-transform duration-700 shadow-lg shadow-black/40" 
                   />
-                  <div className="absolute bg-white/90 backdrop-blur-sm text-slate-800 font-bold tracking-widest uppercase border border-slate-200 shadow-sm" style={{ top: '20px', right: '20px', fontSize: '9px', padding: '4px 10px', borderRadius: '9999px', pointerEvents: 'none' }}>
+                  <div className="absolute bg-white/90 backdrop-blur-sm text-slate-800 font-bold tracking-widest uppercase border border-slate-200 shadow-sm" style={{ top: '12px', right: '12px', fontSize: '9px', padding: '4px 10px', borderRadius: '9999px', pointerEvents: 'none', zIndex: 10 }}>
                     FEATURED
                   </div>
                 </div>
                 <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <h4 className="font-extrabold text-slate-900 group-hover:text-orange-500 transition-colors" style={{ fontSize: '15px', marginBottom: '4px', lineHeight: 1.3 }}>{item.title}</h4>
-                  <p className="text-orange-500 text-[9px] font-bold uppercase tracking-widest mb-3">{item.type}</p>
-                  <p className="text-slate-500 leading-relaxed text-xs line-clamp-4">{item.description}</p>
+                  <h4 className="font-extrabold text-slate-900 transition-colors" style={{ fontSize: '15px', marginBottom: '4px', lineHeight: 1.3 }}>{item.title}</h4>
+                  <p className="text-orange-500 text-[9px] font-bold uppercase tracking-widest mb-3 transition-colors">{item.type}</p>
+                  <p className="text-slate-500 leading-relaxed text-xs line-clamp-4 transition-colors">{item.description}</p>
                 </div>
               </>
             ) : (
               <>
-                <div className="w-full flex justify-center items-center rounded-xl bg-slate-50/80 border border-slate-100 shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)] shrink-0" style={{ height: '140px', marginBottom: '16px', padding: '20px' }}>
+                <div className="w-full flex justify-center items-center rounded-xl bg-slate-50/80 group-hover:bg-white group-active:bg-white transition-colors border border-slate-100 shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)] shrink-0" style={{ height: '140px', marginBottom: '16px', padding: '20px' }}>
                   <img 
                     src={item.imgSrc} 
                     alt={item.imgAlt} 
-                    onClick={() => window.open(item.imgSrc, '_blank')}
                     title="Click to view full image"
+                    onClick={() => setSelectedImage(item.imgSrc)}
                     style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain', cursor: 'pointer' }} 
                     className="group-hover:scale-105 transition-transform duration-500 drop-shadow-sm" 
                   />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <h4 className="font-extrabold text-slate-900 group-hover:text-orange-500 transition-colors" style={{ fontSize: '15px', marginBottom: '4px', lineHeight: 1.3 }}>{item.title}</h4>
-                  <p className="text-orange-500 text-[9px] font-bold uppercase tracking-widest mb-3">{item.type}</p>
-                  <p className="text-slate-500 leading-relaxed text-xs line-clamp-4">{item.description}</p>
+                  <h4 className="font-extrabold text-slate-900 transition-colors" style={{ fontSize: '15px', marginBottom: '4px', lineHeight: 1.3 }}>{item.title}</h4>
+                  <p className="text-orange-500 text-[9px] font-bold uppercase tracking-widest mb-3 transition-colors">{item.type}</p>
+                  <p className="text-slate-500 leading-relaxed text-xs line-clamp-4 transition-colors">{item.description}</p>
                 </div>
               </>
             )}
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/85 backdrop-blur-sm cursor-pointer transition-opacity"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative inline-block max-w-2xl max-h-[75vh] w-auto h-auto" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={selectedImage} 
+              alt="Maximized achievement" 
+              className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl bg-white"
+            />
+            <button 
+              className="absolute top-3 right-3 text-white hover:text-orange-400 bg-black/50 hover:bg-black/90 rounded-full p-2 transition-colors z-50 shadow-md"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

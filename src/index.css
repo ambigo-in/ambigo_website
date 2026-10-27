@@ -4,13 +4,13 @@
 @import "./ambigo-visual-language.css";
 
 @theme {
-  --font-poppins: "Figtree", sans-serif;
-  --font-inter: "Noto Sans", sans-serif;
-  --color-brand-orange: #ff8c42;
-  --color-brand-orange-dark: #e67a35;
-  --color-brand-blue: #2563eb;
-  --color-brand-navy: #0f172a;
-  --color-section-grey: #f4f7fa;
+  --font-poppins: 'Figtree', sans-serif;
+  --font-inter: 'Noto Sans', sans-serif;
+  --color-brand-orange: #FF8C42;
+  --color-brand-orange-dark: #E67A35;
+  --color-brand-blue: #2563EB;
+  --color-brand-navy: #0F172A;
+  --color-section-grey: #F4F7FA;
 }
 
 *,
@@ -31,30 +31,36 @@ body,
   flex-direction: column !important;
   text-align: center !important;
 }
-.awards-main-card__text,
-.awards-main-card__images {
+.awards-main-card__text, .awards-main-card__images {
   width: 100%;
 }
 .awards-main-card__images {
   display: flex !important;
   justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap;
 }
 .awards-main-card__images img {
   height: 160px !important;
   width: auto !important;
   object-fit: cover !important;
-  flex: 1 1 0;
-  min-width: 0;
+  border-radius: 24px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+  border: 4px solid white !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.awards-main-card__images img:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18) !important;
 }
 
 @media (min-width: 768px) {
-  .awards-main-card__text,
-  .awards-main-card__images {
+  .awards-main-card__text, .awards-main-card__images {
     max-width: 800px;
     margin: 0 auto;
   }
   .awards-main-card__images img {
-    height: 240px !important;
+    height: 220px !important;
   }
 }
 
@@ -117,50 +123,6 @@ canvas {
   max-width: 100%;
 }
 
-.ambigo-subpage-shell .team-card {
-  height: auto;
-  min-height: 520px;
-  overflow: hidden;
-}
-
-.ambigo-subpage-shell .card-inner {
-  min-height: 100%;
-}
-
-.ambigo-subpage-shell .card-front,
-.ambigo-subpage-shell .card-back {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 24px 20px 28px;
-  overflow: hidden;
-}
-
-.ambigo-subpage-shell .team-card img {
-  width: min(100%, 180px);
-  height: 180px;
-  min-height: 180px;
-  margin-bottom: 16px;
-}
-
-.ambigo-subpage-shell .team-card .bio {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 0;
-  text-align: center;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.ambigo-subpage-shell .card-back .social-links {
-  margin-top: auto;
-  padding-top: 12px;
-}
-
 /* Shared: hide horizontal scrollbars (carousels) */
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE/Edge legacy */
@@ -175,16 +137,8 @@ canvas {
   position: relative;
   isolation: isolate;
   background:
-    radial-gradient(
-      circle at 18% 8%,
-      rgba(255, 140, 66, 0.08),
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 84% 12%,
-      rgba(37, 99, 235, 0.08),
-      transparent 34%
-    ),
+    radial-gradient(circle at 18% 8%, rgba(255, 140, 66, 0.08), transparent 34%),
+    radial-gradient(circle at 84% 12%, rgba(37, 99, 235, 0.08), transparent 34%),
     #fafcff;
 }
 
@@ -198,11 +152,7 @@ canvas {
   isolation: isolate;
   overflow-x: hidden;
   background:
-    radial-gradient(
-      circle at 16% 8%,
-      rgba(255, 140, 66, 0.12),
-      transparent 30%
-    ),
+    radial-gradient(circle at 16% 8%, rgba(255, 140, 66, 0.12), transparent 30%),
     radial-gradient(circle at 88% 18%, rgba(37, 99, 235, 0.1), transparent 32%),
     linear-gradient(180deg, #fbfdff 0%, #f6f9fc 58%, #fff7f1 100%);
 }
@@ -221,29 +171,14 @@ canvas {
 .ambigo-subpage-shell::before {
   top: 22vh;
   background:
-    radial-gradient(
-      ellipse at 22% 45%,
-      rgba(255, 140, 66, 0.12),
-      transparent 44%
-    ),
-    linear-gradient(
-      170deg,
-      transparent 0 38%,
-      rgba(255, 218, 194, 0.42) 39% 51%,
-      rgba(209, 229, 244, 0.36) 52% 65%,
-      transparent 66%
-    );
+    radial-gradient(ellipse at 22% 45%, rgba(255, 140, 66, 0.12), transparent 44%),
+    linear-gradient(170deg, transparent 0 38%, rgba(255, 218, 194, 0.42) 39% 51%, rgba(209, 229, 244, 0.36) 52% 65%, transparent 66%);
 }
 
 .ambigo-subpage-shell::after {
   bottom: -14vh;
-  background: linear-gradient(
-    8deg,
-    rgba(226, 232, 240, 0.72) 0 36%,
-    rgba(255, 225, 205, 0.54) 37% 49%,
-    rgba(214, 235, 249, 0.42) 50% 60%,
-    transparent 61%
-  );
+  background:
+    linear-gradient(8deg, rgba(226, 232, 240, 0.72) 0 36%, rgba(255, 225, 205, 0.54) 37% 49%, rgba(214, 235, 249, 0.42) 50% 60%, transparent 61%);
 }
 
 .ambigo-subpage-shell main,
@@ -401,16 +336,11 @@ canvas {
 .ambigo-subpage-shell .SSinfo,
 .ambigo-subpage-shell .partner-card,
 .ambigo-subpage-shell .achievement-card {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.9),
-    rgba(248, 252, 255, 0.78)
-  ) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)) !important;
   border: 1px solid rgba(255, 255, 255, 0.72) !important;
   border-radius: 24px !important;
-  box-shadow:
-    0 22px 58px rgba(15, 23, 42, 0.075),
-    inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
   backdrop-filter: blur(16px) saturate(1.06);
 }
 
@@ -426,16 +356,11 @@ canvas {
 .ambigo-subpage-shell .first-aid-tips,
 .ambigo-subpage-shell .why-choose-ambigo,
 .ambigo-subpage-shell .entercontact-wrapper {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.9),
-    rgba(248, 252, 255, 0.78)
-  ) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)) !important;
   border: 1px solid rgba(255, 255, 255, 0.72) !important;
   border-radius: 24px !important;
-  box-shadow:
-    0 22px 58px rgba(15, 23, 42, 0.075),
-    inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
   backdrop-filter: blur(16px) saturate(1.06);
 }
 
@@ -470,21 +395,9 @@ canvas {
   margin: 36px auto !important;
   border-radius: 28px !important;
   background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(248, 252, 255, 0.78)
-    ),
-    radial-gradient(
-      circle at 86% 20%,
-      rgba(88, 183, 238, 0.16),
-      transparent 36%
-    ),
-    radial-gradient(
-      circle at 18% 80%,
-      rgba(255, 140, 66, 0.14),
-      transparent 42%
-    ) !important;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 252, 255, 0.78)),
+    radial-gradient(circle at 86% 20%, rgba(88, 183, 238, 0.16), transparent 36%),
+    radial-gradient(circle at 18% 80%, rgba(255, 140, 66, 0.14), transparent 42%) !important;
   border: 1px solid rgba(255, 255, 255, 0.72) !important;
   box-shadow: 0 24px 66px rgba(15, 23, 42, 0.08) !important;
   color: #0f172a !important;
@@ -518,7 +431,7 @@ canvas {
   object-fit: cover;
 }
 
-.ambigo-subpage-shell button,
+.ambigo-subpage-shell button:not(.ambigo-navbar__menu-btn):not(.terms-tab-btn),
 .ambigo-subpage-shell .conlocation-btn,
 .ambigo-subpage-shell .conpartner-button,
 .ambigo-subpage-shell .hossubmit-button,
@@ -531,18 +444,27 @@ canvas {
   box-shadow: 0 14px 30px rgba(255, 100, 34, 0.22) !important;
 }
 
+/* White hamburger menu on individual page */
+.ambigo-subpage-shell .ambigo-navbar__menu-btn--white {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  backdrop-filter: blur(8px);
+}
+
 .ambigo-subpage-shell .filter-buttons button,
 .ambigo-subpage-shell .termstabs button {
-  background: rgba(255, 255, 255, 0.72) !important;
-  color: #334155 !important;
-  box-shadow: none !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
   border: 1px solid rgba(226, 232, 240, 0.8) !important;
 }
 
 .ambigo-subpage-shell .filter-buttons button.active,
 .ambigo-subpage-shell .termstabs button.active {
-  background: linear-gradient(90deg, #ff8c42, #ff6422) !important;
+  background: #f97316 !important;
   color: #fff !important;
+  border-color: #f97316 !important;
 }
 
 .ambigo-subpage-shell input,
@@ -651,9 +573,7 @@ canvas {
   padding: clamp(18px, 2.6vw, 32px) !important;
   gap: clamp(18px, 3vw, 36px) !important;
   border-radius: 20px !important;
-  box-shadow:
-    0 16px 40px rgba(15, 23, 42, 0.07),
-    inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
 }
 
 .ambigo-subpage-shell .indiservice,
@@ -689,9 +609,7 @@ canvas {
 .ambigo-subpage-shell .career-box {
   border-radius: 18px !important;
   padding: clamp(18px, 2.4vw, 30px) !important;
-  box-shadow:
-    0 14px 34px rgba(15, 23, 42, 0.065),
-    inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.065), inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
 }
 
 .ambigo-subpage-shell .conhelp-options p {
@@ -854,10 +772,7 @@ canvas {
 .ambigo-subpage-shell .achievements-container,
 .ambigo-subpage-shell .partners-grid {
   display: grid !important;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(240px, 100%), 1fr)
-  ) !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)) !important;
   gap: clamp(16px, 2.2vw, 26px) !important;
   max-width: min(1120px, calc(100% - 32px)) !important;
   margin-inline: auto !important;
@@ -1106,6 +1021,7 @@ canvas {
   }
 }
 
+
 .journey-home > section {
   position: relative;
   background: transparent !important;
@@ -1122,7 +1038,7 @@ canvas {
 }
 
 .journey-home > section > .absolute,
-.journey-home > section > [aria-hidden="true"],
+.journey-home > section > [aria-hidden='true'],
 .journey-home > section > .ambigo-glow-backdrop,
 .journey-home > section > .ambigo-section-glow,
 .journey-home > section > .amb-saas-blob {
@@ -1339,8 +1255,7 @@ canvas {
 }
 
 @keyframes journeySuspension {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
@@ -1360,10 +1275,7 @@ canvas {
 }
 
 @media (max-width: 1180px) {
-  .journey-home
-    section:not(:first-child):not(.amb-saas-section):not(
-      .ambigo-app-showcase
-    ):not(.ambigo-why) {
+  .journey-home section:not(:first-child):not(.amb-saas-section):not(.ambigo-app-showcase):not(.ambigo-why) {
     padding-block: clamp(1.25rem, 3vw, 2rem) !important;
     padding-inline: 24px !important;
   }
@@ -1372,10 +1284,7 @@ canvas {
     gap: 22px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .grid:not(.home-ambulance-type-grid)
-    > div {
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
     padding: 24px !important;
     border-radius: 24px !important;
   }
@@ -1396,10 +1305,7 @@ canvas {
 }
 
 @media (max-width: 920px) {
-  .journey-home
-    section:not(:first-child):not(.amb-saas-section):not(
-      .ambigo-app-showcase
-    ):not(.ambigo-why) {
+  .journey-home section:not(:first-child):not(.amb-saas-section):not(.ambigo-app-showcase):not(.ambigo-why) {
     padding-block: clamp(1.25rem, 3vw, 2rem) !important;
     padding-inline: 20px !important;
   }
@@ -1409,18 +1315,12 @@ canvas {
     gap: 18px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .grid:not(.home-ambulance-type-grid)
-    > div {
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
     padding: 20px !important;
     border-radius: 22px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .grid:not(.home-ambulance-type-grid)
-    .flex {
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) .flex {
     min-width: 0;
   }
 
@@ -1465,19 +1365,11 @@ canvas {
     padding: 0 !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .home-health-tip-grid
-    > div
-    > div:first-child {
+  .journey-home section:not(:first-child) .home-health-tip-grid > div > div:first-child {
     height: 150px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .home-health-tip-grid
-    > div
-    > div:last-child {
+  .journey-home section:not(:first-child) .home-health-tip-grid > div > div:last-child {
     padding: 18px !important;
     text-align: left !important;
   }
@@ -1528,10 +1420,7 @@ canvas {
     min-height: 0;
   }
 
-  .journey-home
-    > section:not(:first-child):not(.amb-saas-section):not(
-      .ambigo-app-showcase
-    ) {
+  .journey-home > section:not(:first-child):not(.amb-saas-section):not(.ambigo-app-showcase) {
     padding-block: 40px !important;
     padding-inline: 16px !important;
   }
@@ -1541,10 +1430,7 @@ canvas {
     gap: 16px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .grid:not(.home-ambulance-type-grid)
-    > div {
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div {
     padding: 18px !important;
     border-radius: 20px !important;
   }
@@ -1668,6 +1554,7 @@ canvas {
     line-height: 1.62 !important;
   }
 
+
   .journey-terrain__layer {
     top: 35vh;
     height: 96vh;
@@ -1707,6 +1594,7 @@ canvas {
 }
 
 @media (max-width: 520px) {
+
   .journey-welcome {
     font-size: clamp(32px, 10vw, 44px);
   }
@@ -1715,10 +1603,7 @@ canvas {
     padding-inline: 14px !important;
   }
 
-  .journey-home
-    section:not(:first-child)
-    .grid:not(.home-ambulance-type-grid)
-    > div,
+  .journey-home section:not(:first-child) .grid:not(.home-ambulance-type-grid) > div,
   .journey-home section:not(:first-child) .p-8,
   .journey-home section:not(:first-child) .p-10 {
     padding: 16px !important;
@@ -1790,9 +1675,7 @@ canvas {
 .journey-home.ambigo-vl .ambigo-card,
 .journey-home.ambigo-vl .ambigo-stat-card {
   border: 2px solid rgba(255, 140, 66, 0.45) !important;
-  box-shadow:
-    0 12px 36px rgba(255, 140, 66, 0.12),
-    0 8px 28px rgba(15, 23, 42, 0.06) !important;
+  box-shadow: 0 12px 36px rgba(255, 140, 66, 0.12), 0 8px 28px rgba(15, 23, 42, 0.06) !important;
 }
 
 .journey-home.ambigo-vl .ambigo-card:hover,
@@ -1800,10 +1683,9 @@ canvas {
 .journey-home.ambigo-vl .ambigo-benefit-card:hover {
   border-color: #ff8c42 !important;
   transform: translateY(-8px) !important;
-  box-shadow:
-    0 20px 48px rgba(255, 140, 66, 0.22),
-    0 12px 32px rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 20px 48px rgba(255, 140, 66, 0.22), 0 12px 32px rgba(15, 23, 42, 0.08) !important;
 }
+
 
 a.ambigo-service-card {
   text-decoration: none;
@@ -1879,14 +1761,39 @@ a.ambigo-service-card {
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .achievements-gallery img:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 30px rgba(255, 152, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .marquee-card {
+    height: 420px !important;
+  }
+  .marquee-cover-img {
+    height: 220px !important;
+  }
+  .mobile-fit-image {
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
+
+.ambigo-subpage-shell button.terms-tab-btn {
+  background: #ffffff !important;
+  color: black !important;
+  border: 2px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+}
+
+.ambigo-subpage-shell button.terms-tab-btn.active-tab {
+  background: #f97316 !important;
+  color: #ffffff !important;
+  border: 2px solid #f97316 !important;
+  box-shadow: 0 4px 12px rgba(249,115,22,0.3) !important;
 }
